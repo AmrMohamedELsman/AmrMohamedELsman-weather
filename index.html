@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./js/bootstrap.bundle.min.js">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg  pt-3 text-white">
+                    <div class="container">
+                        <div class="d-flex  justify-content-center">
+                            <a class="navbar-brand" href="#"><img class="img-fluid" src="./imge/logo.png"></a>
+                            <div class="d-flex flex-column align-items-center">
+                                <h2 class="fs-5 mb-0">Weather</h2>
+                                <p class="fs-6">tagline goes here</p>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-around">
+                                <li class="nav-item frist-1 py-0 px-2 border-primary border-5 me-3">
+                                    <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item py-0 px-2 me-3">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item py-0 px-2 me-3">
+                                    <a class="nav-link" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item py-0 px-2 me-3">
+                                    <a class="nav-link" href="#">Photos</a>
+                                </li>
+                                <li class="nav-item py-0 px-2 me-3">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="home-page">
+            <div class="container">
+                <div class="search py-5 mx-auto position-relative input-group">
+                    <input type="search" id="searchBar" class="w-100 rounded-5 border-0 py-3 px-4 text-white" placeholder="finde your location...">
+                    <button id="btnSerch" class="btn btn-primary rounded-5 py-2 px-4 position-absolute end-0 mt-2 me-2">finde</button>
+                </div>
+                <div class="row py-5">
+                    <div class="col-md-4">
+                       <div id="toDayCard" class="rounded-1">
+                            <div class="header-card text-white p-3 d-flex justify-content-between rounded-top-1">
+                                <div id="Day">monday</div>
+                                <div id="dayDate">3 may</div>
+                            </div>
+                            <div class="min-card text-white p-3">
+                                <div id="locaCity" class="fs-3 mt-2 text-white-50">cairo</div>
+                                <div id="degre" class="d-flex mt-2 flex-wrap">
+                                    <div id="numDegre" class="num display-2 fw-bold"></div><div class="num display-2
+                                     fw-bold me-5"><sup>o</sup>c</div> 
+                                    <img id="iconDegre">
+                                </div>
+                                <div id="weatherState" class="weather-state fs-3 mt-3 mb-4 text-primary">clear</div>
+                                <div class="d-flex flex-wrap mt-4 mb-2 text-white-50 justify-content-center">
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-umberella.png">
+                                        <div id="rain">%</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-wind.png">
+                                        <div id="wind">km/h</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-compass.png">
+                                        <div id="directionWind">East</div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="nextDayCard" class="rounded-1">
+                            <div class="header-card text-center text-white p-3 rounded-top-1">
+                                <div class="nextDay">tyousday</div>
+                            </div>
+                            <div class="min-card p-3 text-white text-center">
+                                <img class="nextDayIcon">
+                                <div class="nextDayMaxDegre fs-1 fw-medium">36.5<sup>o</sup>c</div>
+                                <div class="nextDayMinDegre fs-2 fw-medium text-white-50">19.1<sup>o</sup></div>
+                                <div class="nextDayState fs-3 mb- text-primary">sunny</div>
+                                <div class="d-flex flex-wrap mt-3 mb-1 text-white-50 justify-content-center">
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-umberella.png">
+                                        <div class="nextDayRain">%</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-wind.png">
+                                        <div class="nextDayWind">km/h</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-compass.png">
+                                        <div class="nextDaycompass">East</div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="nextDayCard" class="rounded-1">
+                            <div class="header-card text-center text-white p-3 rounded-top-1">
+                                <div class="nextDay">frayday</div>
+                            </div>
+                            <div class="min-card p-3 text-white text-center">
+                                <img class="nextDayIcon">
+                                <div class="nextDayMaxDegre fs-1 fw-medium">46.5<sup>o</sup>c</div>
+                                <div class="nextDayMinDegre fs-2 fw-medium text-white-50">39.1<sup>o</sup></div>
+                                <div class="nextDayState fs-3 text-primary">sunny</div>
+                                <div class="d-flex flex-wrap mt-3 mb-1 text-white-50 justify-content-center">
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-umberella.png">
+                                        <div class="nextDayRain">%</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-wind.png">
+                                        <div class="nextDayWind">km/h</div>
+                                    </div>
+                                    <div class="me-4 d-flex align-items-center">
+                                        <img class="me-2" src="/imge/icon-compass.png">
+                                        <div class="nextDaycompass">East</div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row pt-5 pb-4">
+                    <div class="col-md-8">
+                        <div class="search py-4 mx-auto position-relative input-group">
+                            <input id="eserch" type="email" name="email" class="w-100 rounded-5 border-0 py-3 px-4 text-white" placeholder="Enter your email to subscribe...">
+                            <button id="btne" class="btn btn-primary rounded-5 py-2 px-4 position-absolute end-0 mt-2 me-2">finde</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                        <i class="fa-brands fa-facebook me-3 fs-4 "></i>
+                        <i class="fa-brands fa-twitter me-3 fs-4 "></i>
+                        <i class="fa-brands fa-google me-3 fs-4 "></i>
+                        <i class="fa-brands fa-github me-3 fs-4 "></i>
+                    </div>
+                </div>
+                <div class="text-white pb-5 pt-3 ps-2">Copyright 2014 Company name. Designed by Themezy. All rights reserved</div>
+            </div>
+        </footer>
+    </section>
+    
+     
+ 
+    <script src="./js/bootstrap.bundle.min.js"></script>
+   <script src="./js/mein.js"></script>
+</body>
+</html>
+
+

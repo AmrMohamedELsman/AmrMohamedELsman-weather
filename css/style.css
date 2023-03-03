@@ -1,0 +1,58 @@
+header{
+    background-color: #1e202b;
+}
+
+.navbar .collapse .navbar-nav .nav-item{
+    transition: 0.5s;
+    border: 1px solid #009bd800;
+    border-radius: 30px;
+}
+.navbar .collapse .navbar-nav .nav-item:hover{
+    border: 1px solid #0d6dfb;
+}
+.navbar .collapse .navbar-nav .nav-item a{
+    color: white;
+    transition: 0.5s;
+}
+.navbar .collapse .navbar-nav .nav-item a:hover{
+    color: #0d6dfb;
+}
+
+section .home-page{
+    background-image: url(/imge/banner.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home-page .container .search input{
+    background-color: #1e202b;
+    outline: none;
+}
+
+.col-md-4 #toDayCard, #nextDayCard{
+    background-color: #2d303d;
+}
+.col-md-4 #toDayCard .header-card ,  #nextDayCard .header-card{
+    background-color: #323544;
+}
+footer {
+    background-color: #323544;
+}
+
+footer .container .search input{
+    background-color: #1e202b;
+    outline: none;
+}
+
+footer i{
+    transition: 0.5s;
+    color: #0d6dfb;
+    cursor: pointer;
+    background-color: #1e202b;
+    padding: 10px;
+    border-radius: 50%;
+}
+footer .container .row .col-md-4 .fa-brands:hover{
+    color: white;
+    background-color: #0d6dfb;
+}
